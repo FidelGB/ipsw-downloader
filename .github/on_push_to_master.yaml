@@ -4,10 +4,7 @@ on:
   push:
     branches:
       - "master"
-
-env:
-  DOCKER_IMAGE_NAME: ipsw_downloader
-  DOCKER_REGISTRY: fgarcia14
+      - "develop"
 
 jobs:
   build:
