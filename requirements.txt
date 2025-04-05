@@ -1,0 +1,4 @@
+aiohttp==3.11.15
+fire==0.7.0
+tdqm==0.0.1
+python-dotenv==1.1.0
