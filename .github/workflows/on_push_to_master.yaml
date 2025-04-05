@@ -6,6 +6,10 @@ on:
       - "master"
       - "develop"
 
+env:
+  DOCKER_REGISTRY: vars.DOCKER_REGISTRY
+  DOCKER_REGISTRY: vars.DOCKER_REGISTRY
+
 jobs:
   build:
     strategy:
