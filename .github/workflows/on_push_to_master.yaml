@@ -7,8 +7,8 @@ on:
       - "develop"
 
 env:
-  DOCKER_REGISTRY: vars.DOCKER_REGISTRY
-  DOCKER_IMAGE_NAME: vars.DOCKER_IMAGE_NAME
+  DOCKER_REGISTRY: ${{ vars.DOCKER_REGISTRY }}
+  DOCKER_IMAGE_NAME: ${{ vars.DOCKER_IMAGE_NAME }}
 
 jobs:
   build:
