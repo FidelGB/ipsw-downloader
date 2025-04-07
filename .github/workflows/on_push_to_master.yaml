@@ -42,6 +42,8 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
+          build-args: |
+            APP_VERSION=${{ steps.versioning.outputs.tag }}
           push: true
           tags: |
             ${{ env.DOCKER_REGISTRY }}/${{ env.DOCKER_IMAGE_NAME }}:${{ steps.versioning.outputs.tag }}

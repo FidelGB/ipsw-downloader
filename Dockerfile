@@ -1,5 +1,6 @@
 FROM python:3.11-slim
-
+ARG APP_VERSION="indev"
+ENV APP_VERSION=${APP_VERSION}
 WORKDIR /app
 
 COPY src/main.py .
