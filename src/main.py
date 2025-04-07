@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+APP_VERSION = os.environ.get("APP_VERSION", "indev")
 DOWNLOAD_DIR = os.environ.get("DOWNLOAD_DIR", "./ipsw_files")
 DEFAULT_INTERVAL = int(os.environ.get("INTERVAL_CHECK","600"))
 MAX_RETRIES = int(os.environ.get("DOWNLOAD_MAX_RETRIES", "3"))
@@ -107,6 +108,8 @@ async def monitor(devices):
     print("  / _` |/ _ \ \ /\ / / '_ \| |/ _ \ / _` |/ _` |/ _ \ '__|")
     print(" | (_| | (_) \ V  V /| | | | | (_) | (_| | (_| |  __/ |   ")
     print("  \__,_|\___/ \_/\_/ |_| |_|_|\___/ \__,_|\__,_|\___|_|   ")
+    print("")
+    print(f"Version: {APP_VERSION}")
     print("")
 
     async with aiohttp.ClientSession() as session:
