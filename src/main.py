@@ -96,21 +96,6 @@ async def download_ipsw(session, device, version, url):
 
 async def monitor(devices):
     """Verifica periódicamente si hay nuevas versiones de IPSW y las descarga en paralelo."""
-    
-    print("  ___ ____  ______        __")
-    print(" |_ _|  _ \/ ___\ \      / /")
-    print("  | || |_) \___ \\ \ /\ / / ")
-    print("  | ||  __/ ___) |\ V  V /  ")
-    print(" |___|_|   |____/  \_/\_/   ")
-    print("")                       
-    print("      _                     _                 _           ")
-    print("   __| | _____      ___ __ | | ___   __ _  __| | ___ _ __ ")
-    print("  / _` |/ _ \ \ /\ / / '_ \| |/ _ \ / _` |/ _` |/ _ \ '__|")
-    print(" | (_| | (_) \ V  V /| | | | | (_) | (_| | (_| |  __/ |   ")
-    print("  \__,_|\___/ \_/\_/ |_| |_|_|\___/ \__,_|\__,_|\___|_|   ")
-    print("")
-    print(f"Version: {APP_VERSION}")
-    print("")
 
     async with aiohttp.ClientSession() as session:
         while True:
@@ -143,4 +128,18 @@ async def monitor(devices):
             await asyncio.sleep(DEFAULT_INTERVAL)
 
 if __name__ == "__main__":
+    print("  ___ ____  ______        __")
+    print(" |_ _|  _ \/ ___\ \      / /")
+    print("  | || |_) \___ \\ \ /\ / / ")
+    print("  | ||  __/ ___) |\ V  V /  ")
+    print(" |___|_|   |____/  \_/\_/   ")
+    print("")                       
+    print("      _                     _                 _           ")
+    print("   __| | _____      ___ __ | | ___   __ _  __| | ___ _ __ ")
+    print("  / _` |/ _ \ \ /\ / / '_ \| |/ _ \ / _` |/ _` |/ _ \ '__|")
+    print(" | (_| | (_) \ V  V /| | | | | (_) | (_| | (_| |  __/ |   ")
+    print("  \__,_|\___/ \_/\_/ |_| |_|_|\___/ \__,_|\__,_|\___|_|   ")
+    print("")
+    print(f"Version: {APP_VERSION}")
+    print("")
     fire.Fire({"monitor": lambda: asyncio.run(monitor(DEVICES.strip().split(" ")))})
