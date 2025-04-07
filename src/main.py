@@ -140,4 +140,4 @@ async def monitor(devices):
             await asyncio.sleep(DEFAULT_INTERVAL)
 
 if __name__ == "__main__":
-    fire.Fire({"monitor": lambda: asyncio.run(monitor(DEVICES.trim().split(" ")))})
+    fire.Fire({"monitor": lambda: asyncio.run(monitor(DEVICES.strip().split(" ")))})
