@@ -3,6 +3,5 @@ services:
     build: 
       context: ../
       dockerfile: Dockerfile.dev
-      
-    
-      
+    volumes:
+      - ../:/app
