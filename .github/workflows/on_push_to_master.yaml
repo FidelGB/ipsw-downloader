@@ -41,7 +41,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          file: ./Dockerfile
+          file: ./Dockerfile.prod
           build-args: |
             APP_VERSION=${{ steps.versioning.outputs.tag }}
           push: true
