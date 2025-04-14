@@ -1,0 +1,13 @@
+name: Pull request action
+
+on:
+  pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Check python format
+        run: docker compose -f cicd/docker-compose.yml run --remove-orphans ipsw_downloader black --check -v .
