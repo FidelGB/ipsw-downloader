@@ -1,0 +1,7 @@
+services:
+  ipsw_downloader:
+    build: 
+      context: ../
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ../:/app
