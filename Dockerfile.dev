@@ -1,0 +1,12 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY ../ .
+
+RUN ls -l
+
+RUN pip install -r requirements.txt
+RUN pip install -r dev-requirements.txt
+
+CMD ["python"]
