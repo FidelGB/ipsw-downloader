@@ -11,10 +11,6 @@ env:
 
 jobs:
   build:
-    strategy:
-      matrix:
-        node-version: 
-        - 20
     name: Publish image
     runs-on: ubuntu-latest
     environment: Docker
